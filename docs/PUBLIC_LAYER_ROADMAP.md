@@ -47,12 +47,12 @@ This repository is the public contract layer for the `brick-bootkit-admin` ecosy
   - message channel contracts
   - event listener contracts
 
-### Phase 2
+### Phase 2 (in progress)
 
 - `eqadmin-starter-api`
-  - public auto-configuration facade
-  - starter metadata
-  - SPI bootstrap helpers
+  - public auto-configuration facade (`EqadminSpiAutoConfiguration` + `SpiRegistry`)
+  - starter metadata (`EqadminStarterMetadata`)
+  - SPI bootstrap helpers (`SpiBootstrap`, `EnableEqadminSpi`)
 
 ## What should stay private
 

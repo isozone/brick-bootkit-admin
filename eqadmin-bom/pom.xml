@@ -45,6 +45,11 @@
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
+                <artifactId>eqadmin-starter-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>eqadmin-result</artifactId>
                 <version>${project.version}</version>
             </dependency>

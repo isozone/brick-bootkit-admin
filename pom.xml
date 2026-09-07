@@ -51,6 +51,7 @@
         <module>eqadmin-annotations</module>
         <module>brick-boot-admin-api</module>
         <module>eqadmin-spi</module>
+        <module>eqadmin-starter-api</module>
         <module>eqadmin-result</module>
         <module>eqadmin-plugins</module>
     </modules>
