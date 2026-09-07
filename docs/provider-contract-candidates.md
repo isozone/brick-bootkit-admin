@@ -12,6 +12,11 @@
 
 ## A. Provider 契约候选（SPI，按插件引用次数排序）
 
+> 全部候选契约已交付（2026-09-05），宿主侧均有对应 adapter 接线：
+> `DictionaryProvider`（sys）、`OssConfigProvider`/`FileDetailProvider`（oss）、
+> `AccountQueryProvider`/`DataScopeProvider`/`PermissionProvider`（sys）、
+> `CompanyProvider.list()` 扩充（sys）；公共模型 `DictItem`/`OssConfigInfo`/`FileDetailInfo`/`AccountVO` 已入 `brick-boot-admin-api`。
+
 | 候选契约 | 现被直接引用的宿主内部类 | 引用数 | 建议公开面 |
 |---|---|---|---|
 | `DictionaryProvider` | `service.IQixiaozhuDictService` | 8 | 字典项查询（按字典码/分组） |
@@ -35,9 +40,9 @@
 - `cn.net.rjnetwork.qixiaozhu.plugins.*`——插件仓自建共享包，非宿主契约
 - `spi.*` / `account.*` / `company.*` / `annotation.*` / `result.*` 等——已是公开契约
 
-## 建议执行顺序
+## 建议执行顺序（全部已完成 ✅）
 
-1. `DictionaryProvider` + `AccountVO`（引用最多、模型最简）
-2. `FileDetailProvider` + `OssConfigProvider`（宿主已有 oss 模块适配基础）
-3. `DataScopeProvider`（与 `DataScopeContributor` 一并设计，见 roadmap）
-4. `PermissionProvider` / 扩充 `CompanyProvider`（视插件真实调用面再细化）
+1. ✅ `DictionaryProvider` + `AccountVO`（引用最多、模型最简）
+2. ✅ `FileDetailProvider` + `OssConfigProvider`（宿主已有 oss 模块适配基础）
+3. ✅ `DataScopeProvider`（与 `DataScopeContributor` 一并设计，见 roadmap）
+4. ✅ `PermissionProvider` / 扩充 `CompanyProvider`（视插件真实调用面再细化）

@@ -37,10 +37,18 @@ This repository is the public contract layer for the `brick-bootkit-admin` ecosy
 - message channel DTO and SPI contracts
 - message event type enum
 - message dispatch event models
+- message dispatch listener contracts
+- sms vendor contracts (`SmsVendorProvider` + `SmsSendRequest` / `SmsSendResult`)
+- data-scope contracts (`DataScopeContributor` + `DataScopeProvider` + `DataScopeContext`)
+- dictionary contracts (`DictionaryProvider` + `DictItem`)
+- oss config contracts (`OssConfigProvider` + `OssConfigInfo`)
+- file detail contracts (`FileDetailProvider` + `FileDetailInfo`)
+- account query contract (`AccountQueryProvider` + `AccountVO`)
+- permission contract (`PermissionProvider`)
 
 ## Planned next modules
 
-### Phase 1
+### Phase 1 (done)
 
 - extend `eqadmin-spi`
   - more provider contracts
