@@ -30,6 +30,8 @@ public class ChannelConfigDTO implements Serializable {
     private WechatMpChannelConfig wechatMpConfig;
     private DingtalkBotChannelConfig dingtalkBotConfig;
     private WecomBotChannelConfig wecomBotConfig;
+    private WebhookChannelConfig webhookConfig;
+    private JpushChannelConfig jpushConfig;
 
     @Data
     @Builder
@@ -136,5 +138,27 @@ public class ChannelConfigDTO implements Serializable {
         private String webhookUrl;
         private String[] mentionedList;
         private String[] mentionedMobileList;
+    }
+
+    @Data
+    @Builder
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class WebhookChannelConfig implements Serializable {
+        private String webhookUrl;
+        private String secret;
+        private String method;
+        private String contentType;
+    }
+
+    @Data
+    @Builder
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class JpushChannelConfig implements Serializable {
+        private String appKey;
+        private String masterSecret;
+        private String audienceMode;
+        private Boolean sendToOwner;
     }
 }

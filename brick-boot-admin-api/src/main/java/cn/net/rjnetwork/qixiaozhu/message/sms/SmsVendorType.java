@@ -9,7 +9,8 @@ public enum SmsVendorType {
     QINIU("QINIU", "Qiniu SMS"),
     JINGDONG("JINGDONG", "JingDong SMS"),
     TENCENT("TENCENT", "Tencent SMS"),
-    BAIDU("BAIDU", "Baidu SMS");
+    BAIDU("BAIDU", "Baidu SMS"),
+    TWILIO("TWILIO", "Twilio SMS");
 
     private final String code;
     private final String displayName;

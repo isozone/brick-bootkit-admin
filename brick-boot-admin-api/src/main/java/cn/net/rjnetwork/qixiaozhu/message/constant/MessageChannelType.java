@@ -13,7 +13,9 @@ public enum MessageChannelType {
     QQ_OPEN_BOT("QQ_OPEN_BOT", "QQ Open Bot"),
     WECHAT_MP("WECHAT_MP", "WeChat MP"),
     DINGTALK_BOT("DINGTALK_BOT", "DingTalk Bot"),
-    WECOM_BOT("WECOM_BOT", "WeCom Bot");
+    WECOM_BOT("WECOM_BOT", "WeCom Bot"),
+    WEBHOOK("WEBHOOK", "Generic Webhook"),
+    JPUSH("JPUSH", "JPush App Push");
 
     private final String code;
     private final String displayName;
