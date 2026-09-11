@@ -7,7 +7,7 @@
     <parent>
         <groupId>cn.net.rjnetwork</groupId>
         <artifactId>brick-bootkit-admin-parent</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
     </parent>
 
     <artifactId>eqadmin-starter-api</artifactId>
