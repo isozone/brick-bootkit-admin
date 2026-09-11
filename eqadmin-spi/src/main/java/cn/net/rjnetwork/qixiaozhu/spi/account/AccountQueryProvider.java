@@ -38,4 +38,19 @@ public interface AccountQueryProvider {
      * @return the account view, or {@code null} when not found
      */
     AccountVO getByAccount(String account);
+
+    /**
+     * Search account views by free-text keyword for picker-style UIs.
+     *
+     * <p>Host implementations typically match against login account, real
+     * name, mobile and email. Callers pass a small {@code limit} and render
+     * the result as a selectable list.</p>
+     *
+     * @param keyword free-text keyword; a blank keyword means "no filter"
+     * @param limit   maximum number of results, clamped by the host
+     * @return matching account views, never {@code null}
+     */
+    default List<AccountVO> search(String keyword, int limit) {
+        return List.of();
+    }
 }
